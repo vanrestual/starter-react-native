@@ -23,8 +23,11 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>com.googleusercontent.apps.795545057578-oqldlev5c39jn0a7nghs8tt31roms860</string>
 				<string>fb621272166598772</string>
 			</array>
 		</dict>
@@ -37,6 +40,10 @@
 	<string>532f372ea92a77b6e9a7a63591c2603a</string>
 	<key>FacebookDisplayName</key>
 	<string>$(PRODUCT_NAME)</string>
+	<key>GIDClientID</key>
+	<string>795545057578-oqldlev5c39jn0a7nghs8tt31roms860.apps.googleusercontent.com</string>
+	<key>GIDServerClientID</key>
+	<string>795545057578-vpg5vh0dk3k8sggb91756he8ohe1j8b0.apps.googleusercontent.com</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
