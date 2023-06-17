@@ -1,7 +1,3 @@
-/**
- * @format
- */
-
 import React from 'react';
 import {Button, SafeAreaView, StyleSheet, useColorScheme} from 'react-native';
 import {
