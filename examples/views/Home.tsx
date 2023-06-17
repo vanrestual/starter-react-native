@@ -15,12 +15,12 @@ export default function Home(props: HomeProps) {
   return (
     <View style={styles.container}>
       <Button
-        title="Products"
         onPress={() => props.navigation.navigate('Products', {screen: 'Index'})}
+        title="Products"
       />
       <Button
-        title="Settings"
         onPress={() => props.navigation.navigate('Settings', {screen: 'Index'})}
+        title="Settings"
       />
     </View>
   );

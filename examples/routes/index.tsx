@@ -20,15 +20,15 @@ const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 export default () => (
   <RootStack.Navigator initialRouteName="Home">
-    <RootStack.Screen name="Home" component={Home} />
+    <RootStack.Screen component={Home} name="Home" />
     <RootStack.Screen
-      name="Products"
       component={Products}
+      name="Products"
       options={{headerShown: false}}
     />
     <RootStack.Screen
-      name="Settings"
       component={Settings}
+      name="Settings"
       options={{headerShown: false}}
     />
   </RootStack.Navigator>

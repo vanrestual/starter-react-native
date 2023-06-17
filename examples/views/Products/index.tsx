@@ -70,14 +70,3 @@ export default function Products(props: ProductsProps) {
     </View>
   );
 }
-
-// [{
-//   "brand": "Apple",
-//   "category": "smartphones",
-//   "discountPercentage": 17.94,
-//   "images": ["https://i.dummyjson.com/data/products/2/1.jpg", "https://i.dummyjson.com/data/products/2/2.jpg", "https://i.dummyjson.com/data/products/2/3.jpg", "https://i.dummyjson.com/data/products/2/thumbnail.jpg"],
-//   "price": 899,
-//   "rating": 4.44,
-//   "stock": 34,
-//   "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
-// }, ...]
