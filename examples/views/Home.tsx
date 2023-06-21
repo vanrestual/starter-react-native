@@ -15,10 +15,8 @@ export default function Home(props: HomeProps) {
   return (
     <View style={styles.container}>
       <Button
-        onPress={() =>
-          props.navigation.navigate('ScanQRCode', {screen: 'Index'})
-        }
-        title="Scan QR Code"
+        onPress={() => props.navigation.navigate('Camera', {screen: 'Index'})}
+        title="Camera"
       />
     </View>
   );

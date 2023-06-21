@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button, Linking, StyleSheet, Text, View} from 'react-native';
 import {Camera, CameraPermissionStatus} from 'react-native-vision-camera';
-import type {PermissionsProps} from '../../routes/ScanQRCode';
+import type {PermissionsProps} from '../../routes/Camera';
 
 const styles = StyleSheet.create({
   container: {

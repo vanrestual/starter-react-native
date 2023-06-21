@@ -17,7 +17,7 @@ import {
 import IonIcon from 'react-native-vector-icons/Ionicons';
 import MaterialIcon from 'react-native-vector-icons/Ionicons';
 import useCamera, {examplePlugin} from '../../hooks/Camera';
-import type {CameraProps} from '../../routes/ScanQRCode';
+import type {CameraProps} from '../../routes/Camera';
 import CaptureButton from './Partials/CaptureButton';
 import StatusBarBlurBackground from './Partials/StatusBarBlurBackground';
 

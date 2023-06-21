@@ -4,12 +4,12 @@ import {
   createNativeStackNavigator,
   type NativeStackScreenProps,
 } from '@react-navigation/native-stack';
-import ScanQRCode, {type ScanQRCodeStackParamList} from './ScanQRCode';
+import Camera, {type CameraStackParamList} from './Camera';
 import Home from '../views/Home';
 
 export type RootStackParamList = {
   Home: undefined;
-  ScanQRCode: NavigatorScreenParams<ScanQRCodeStackParamList>;
+  Camera: NavigatorScreenParams<CameraStackParamList>;
 };
 
 export type HomeProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
@@ -20,8 +20,8 @@ export default () => (
   <RootStack.Navigator initialRouteName="Home">
     <RootStack.Screen component={Home} name="Home" />
     <RootStack.Screen
-      component={ScanQRCode}
-      name="ScanQRCode"
+      component={Camera}
+      name="Camera"
       options={{headerShown: false}}
     />
   </RootStack.Navigator>

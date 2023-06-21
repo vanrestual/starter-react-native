@@ -3,35 +3,29 @@ import {
   createNativeStackNavigator,
   type NativeStackScreenProps,
 } from '@react-navigation/native-stack';
-import Camera from '../views/ScanQRCode/Camera';
-import Media from '../views/ScanQRCode/Media';
-import Permissions from '../views/ScanQRCode/Permissions';
+import Camera from '../views/Camera';
+import Media from '../views/Camera/Media';
+import Permissions from '../views/Camera/Permissions';
 
 import {
   Camera as VisionCamera,
   type CameraPermissionStatus,
 } from 'react-native-vision-camera';
 
-export type ScanQRCodeStackParamList = {
-  Camera: undefined;
+export type CameraStackParamList = {
+  Index: undefined;
   Media: {path: string; type: 'photo' | 'video'};
   Permissions: undefined;
 };
 
-export type CameraProps = NativeStackScreenProps<
-  ScanQRCodeStackParamList,
-  'Camera'
->;
-export type MediaProps = NativeStackScreenProps<
-  ScanQRCodeStackParamList,
-  'Media'
->;
+export type CameraProps = NativeStackScreenProps<CameraStackParamList, 'Index'>;
+export type MediaProps = NativeStackScreenProps<CameraStackParamList, 'Media'>;
 export type PermissionsProps = NativeStackScreenProps<
-  ScanQRCodeStackParamList,
+  CameraStackParamList,
   'Permissions'
 >;
 
-const ScanQRCodeStack = createNativeStackNavigator<ScanQRCodeStackParamList>();
+const CameraStack = createNativeStackNavigator<CameraStackParamList>();
 
 export default () => {
   const [cameraPermission, setCameraPermission] =
@@ -58,16 +52,16 @@ export default () => {
     microphonePermission === 'not-determined';
 
   return (
-    <ScanQRCodeStack.Navigator
-      initialRouteName={showPermissions ? 'Permissions' : 'Camera'}
+    <CameraStack.Navigator
+      initialRouteName={showPermissions ? 'Permissions' : 'Index'}
       screenOptions={{
         animationTypeForReplace: 'push',
         headerShown: false,
         statusBarStyle: 'dark',
       }}>
-      <ScanQRCodeStack.Screen component={Permissions} name="Permissions" />
-      <ScanQRCodeStack.Screen component={Camera} name="Camera" />
-      <ScanQRCodeStack.Screen
+      <CameraStack.Screen component={Permissions} name="Permissions" />
+      <CameraStack.Screen component={Camera} name="Index" />
+      <CameraStack.Screen
         component={Media}
         name="Media"
         options={{
@@ -75,6 +69,6 @@ export default () => {
           presentation: 'transparentModal',
         }}
       />
-    </ScanQRCodeStack.Navigator>
+    </CameraStack.Navigator>
   );
 };
