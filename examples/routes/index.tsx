@@ -4,12 +4,14 @@ import {
   createNativeStackNavigator,
   type NativeStackScreenProps,
 } from '@react-navigation/native-stack';
+import Camera, {type CameraStackParamList} from './Camera';
 import Products, {type ProductsStackParamList} from './Products';
 import Settings, {type SettingsStackParamList} from './Settings';
 import Home from '../views/Home';
 
 export type RootStackParamList = {
   Home: undefined;
+  Camera: NavigatorScreenParams<CameraStackParamList>;
   Products: NavigatorScreenParams<ProductsStackParamList>;
   Settings: NavigatorScreenParams<SettingsStackParamList>;
 };
@@ -21,6 +23,11 @@ const RootStack = createNativeStackNavigator<RootStackParamList>();
 export default () => (
   <RootStack.Navigator initialRouteName="Home">
     <RootStack.Screen component={Home} name="Home" />
+    <RootStack.Screen
+      component={Camera}
+      name="Camera"
+      options={{headerShown: false}}
+    />
     <RootStack.Screen
       component={Products}
       name="Products"

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, StyleSheet, View} from 'react-native';
-import {HomeProps} from '../routes';
+import type {HomeProps} from '../routes';
 
 const styles = StyleSheet.create({
   container: {
@@ -14,6 +14,10 @@ const styles = StyleSheet.create({
 export default function Home(props: HomeProps) {
   return (
     <View style={styles.container}>
+      <Button
+        onPress={() => props.navigation.navigate('Camera', {screen: 'Index'})}
+        title="Camera"
+      />
       <Button
         onPress={() => props.navigation.navigate('Products', {screen: 'Index'})}
         title="Products"
